@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src = "node_modules/react/dist/react.js"></script>
+    <script src = "node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="node_modules/babel-standalone/babel.js"></script>
+    <link rel="stylesheet" href="homework.css">
+</head>
+<body>
+<div id = "wrap">
+
+</div>
+
+<script type="text/babel">
+var array = ['编程','读书','JavaScript教程','Python教程','Git教程','问答','赞助'];
+
+var element = (
+    <div>
+        <div className="name">廖雪峰的官方网站</div>
+        <div>
+            {
+                array.map(function (name) {
+                    return <div className="title">{name}</div>
+                })
+            }
+        </div>
+        <div className="login">登录</div>
+    </div>
+);
+
+ReactDOM.render(
+    element,
+    document.getElementById("wrap")
+)
+
+
+
+</script>
+
+
+</body>
+</html>
